@@ -1,0 +1,39 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+cube(  0)+sqrt(  0)=    0, expected_value=    0, mode=0
+cube(  0)+sqrt(  0)=    0, expected_value=  0, mode=1
+cube( 15)+sqrt( 15)= 3378, expected_value= 3378, mode=0
+cube( 15)+sqrt( 15)=    0, expected_value=  0, mode=1
+cube( 30)+sqrt( 30)=27005, expected_value=27005, mode=0
+cube( 30)+sqrt( 30)=    0, expected_value=  0, mode=1
+cube( 45)+sqrt( 45)=25595, expected_value=25595, mode=0
+cube( 45)+sqrt( 45)=    1, expected_value=  1, mode=1
+cube( 60)+sqrt( 60)=19399, expected_value=19399, mode=0
+cube( 60)+sqrt( 60)=    3, expected_value=  3, mode=1
+cube( 75)+sqrt( 75)=28667, expected_value=28667, mode=0
+cube( 75)+sqrt( 75)=    6, expected_value=  6, mode=1
+cube( 90)+sqrt( 90)= 8113, expected_value= 8113, mode=0
+cube( 90)+sqrt( 90)=   11, expected_value= 11, mode=1
+cube(105)+sqrt(105)=43523, expected_value=43523, mode=0
+cube(105)+sqrt(105)=   17, expected_value= 17, mode=1
+cube(120)+sqrt(120)=24074, expected_value=24074, mode=0
+cube(120)+sqrt(120)=   26, expected_value= 26, mode=1
+cube(135)+sqrt(135)=35554, expected_value=35554, mode=0
+cube(135)+sqrt(135)=   37, expected_value= 37, mode=1
+cube(150)+sqrt(150)=32676, expected_value=32676, mode=0
+cube(150)+sqrt(150)=   51, expected_value= 51, mode=1
+cube(165)+sqrt(165)=35689, expected_value=35689, mode=0
+cube(165)+sqrt(165)=   68, expected_value= 68, mode=1
+cube(180)+sqrt(180)=64845, expected_value=64845, mode=0
+cube(180)+sqrt(180)=   88, expected_value= 88, mode=1
+cube(195)+sqrt(195)= 9320, expected_value= 9320, mode=0
+cube(195)+sqrt(195)=  113, expected_value=113, mode=1
+cube(210)+sqrt(210)=20438, expected_value=20438, mode=0
+cube(210)+sqrt(210)=  141, expected_value=141, mode=1
+cube(225)+sqrt(225)=52912, expected_value=52912, mode=0
+cube(225)+sqrt(225)=  173, expected_value=173, mode=1
+cube(240)+sqrt(240)=61455, expected_value=61455, mode=0
+cube(240)+sqrt(240)=  210, expected_value=210, mode=1
+cube(255)+sqrt(255)=  782, expected_value=  782, mode=0
+cube(255)+sqrt(255)=  253, expected_value=253, mode=1
+$stop called at time : 9700 ns : File "C:/Users/1/S-tech/S-tech_Lab3/S-tech_Lab3.srcs/sim_1/new/func_tb.v" Line 69

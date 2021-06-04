@@ -1,36 +1,19 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/08/2021 02:32:05 PM
-// Design Name: 
-// Module Name: func_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module func_tb;
 	reg clk_i;
 	reg rst_i;
 	reg start_i;
+	reg mode,waitMode;
 	reg [7:0] a_i, b_i;
-	wire busy_o;
-	wire [23:0] y_o;
+	wire [1:0] busy_o;
+	wire [15:0] y_o;
 	initial begin
 		rst_i <= 1;
 		a_i <= 0;
 		b_i <= 0;
+		mode <= 0;
+		waitMode <= 0;
 	end
 	initial begin
 		clk_i <= 1;
@@ -46,10 +29,27 @@ module func_tb;
 		.a_i(a_i),
 		.b_i(b_i),
 		.busy_o(busy_o),
-		.y_o(y_o)
+		.y_o(y_o),
+		.change_mode(mode)
 	);
 	
 	always @(posedge clk_i) begin
+	    if (mode==1) begin
+	       if (waitMode==0) begin
+	           waitMode <=1;
+	       end else if (waitMode==1) begin
+	           $display("cube(%d)+sqrt(%d)=%d, expected_value=%d, mode=%d",a_i,b_i,y_o,expected_value[23:16], mode);
+	           mode <= 0;
+	           waitMode <= 0;
+	           if (!rst_i && a_i<241) begin
+				    a_i <= a_i+15;
+				    b_i <= b_i+15;
+			 	   rst_i <= 1;  
+			   end else begin
+				    $stop;
+			   end
+			end
+	    end else
 		if (rst_i) begin
 			expected_value <= 0;
 			rst_i <= 0;
@@ -89,14 +89,10 @@ module func_tb;
 				expected_value <= a_i*a_i*a_i+15;
 			end
 			#1
-			$display("cube(%d)+sqrt(%d)=%d, expected_value=%d",a_i,b_i,y_o,expected_value);
-			if (!rst_i && a_i<241) begin
-				a_i <= a_i+15;
-				b_i <= b_i+15;
-				rst_i <= 1;
-			end else begin
-				$stop;
-			end
+			$display("cube(%d)+sqrt(%d)=%d, expected_value=%d, mode=%d",a_i,b_i,y_o,expected_value[15:0], mode);
+		    if (mode==0) begin
+		      mode <= 1;
+		    end
 		end else begin
 			start_i <= 0;
 		end

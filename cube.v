@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/07/2021 02:32:11 PM
-// Design Name: 
-// Module Name: cube
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module cube (
   input clk_i,
@@ -57,15 +37,15 @@ module cube (
       case (state)
 		IDLE:
 			if (start_i) begin
-				if (x_bi==0) begin
-					y_bo <= 0;
-				end else begin
+				//if (x_bi==0) begin
+					//y_bo <= 0;
+				//end else begin
 					state <= FIRST_WORK;
 					a <= {8'b0,x_bi};
 					b <= x_bi;
 					start <= 1;
 					start_end <= 0;
-				end
+				//end
 			end
 		FIRST_WORK:
 			begin

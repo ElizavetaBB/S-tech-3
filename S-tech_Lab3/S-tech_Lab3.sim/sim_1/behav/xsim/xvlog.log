@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/1/S-tech/S-tech_Lab3/S-tech_Lab3.srcs/sources_1/new/cube.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cube
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/1/S-tech/S-tech_Lab3/S-tech_Lab3.srcs/sources_1/new/func.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/1/S-tech/S-tech_Lab3/S-tech_Lab3.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/1/S-tech/S-tech_Lab3/S-tech_Lab3.srcs/sources_1/new/sqrt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sqrt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/1/S-tech/S-tech_Lab3/S-tech_Lab3.srcs/sim_1/new/func_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module func_tb
